@@ -18,7 +18,7 @@ from django.urls import path, include
 from UI import views as ui_views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', ui_views.homepage),
-
+    path('', ui_views.homepage, name='home'),
+    path('login', ui_views.loginpage, name='login'),
     path('customers/', include('Customers.urls'))
 ]

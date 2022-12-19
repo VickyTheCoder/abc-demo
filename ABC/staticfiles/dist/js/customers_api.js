@@ -25,6 +25,9 @@ function add_new_customer(){
         data: data,
         success: function(response){
             alert(response['status']);
+        },
+        error:  function(response){
+            alert(response);
         }
     });
 }
